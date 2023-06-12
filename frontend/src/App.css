@@ -1,0 +1,151 @@
+:root {
+  --primaryColor: #181818;
+  --secondaryColor: #1f1f1f;
+  --borderColor: #2a2a2a;
+  --titleColor: rgb(21, 148, 117);
+
+  /* --primaryColor: #000c1c;
+  --secondaryColor: #000a2a; */
+}
+.wrapper {
+  height: 100vh;
+  overflow-x: auto;
+  background-color: var(--primaryColor) !important;
+}
+.post_card {
+  background-color: var(--secondaryColor) !important;
+  border: 1px solid var(--borderColor) !important;
+  color: white !important;
+}
+
+.username {
+  font-weight: bold;
+}
+.post_date {
+  font-weight: 100;
+  color: rgb(173, 173, 173);
+}
+.post_title {
+  color: var(--titleColor);
+  font-weight: 550;
+  margin: 0;
+}
+.post_content_div {
+  border-left: 0.5px solid #797979 !important;
+  padding-left: 5px;
+}
+
+.header {
+  background-color: var(--secondaryColor);
+  color: white;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  /* margin: 0; */
+  height: 60px;
+  border-bottom: 1px solid var(--borderColor);
+}
+.footer {
+  background-color: var(--secondaryColor);
+  color: white;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid var(--borderColor);
+}
+
+.footer_icon {
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  padding: 2px;
+  border: 1px solid var(--borderColor);
+  font-size: 35px;
+}
+
+.app_label {
+  font-size: 12px;
+  color: white;
+}
+
+span {
+  color: rgb(255, 63, 63);
+  font-weight: 100;
+  font-size: 12px;
+  margin: 0;
+}
+.post_input {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: var(--borderColor);
+  color: white;
+}
+.post_input:focus {
+  outline: none;
+}
+
+.app_primary_button {
+  background-color: var(--titleColor);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  /* margin-top: 10px; */
+}
+
+.app_delete_button {
+  background-color: rgb(255, 48, 48);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  /* margin-top: 10px; */
+}
+
+.app_title {
+  color: white;
+}
+
+.modal_div {
+  background-color: var(--secondaryColor);
+  color: white;
+}
+
+
+
+.comments_div {
+  background-color: var(--secondaryColor);
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.nameee {
+  /* font-family: cursive;
+  font-style: italic; */
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: italic;
+  color: rgb(21, 148, 117);
+  text-shadow: #797979 1px;
+}
+
+.liked_btn {
+  color: rgb(21, 148, 117);
+}
+.un-liked_btn {
+  color: white;
+}
