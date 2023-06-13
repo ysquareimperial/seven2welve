@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
     bcrypt.compare(password, user.password).then((match) => {
         if (!match) res.json({ error: 'wrong password' })
         const accessToken = sign({ username: user.username, id: user.id }, 'important-secrete',) //behind string to protect our token
-        res.json(accessToken)               
+        res.json(accessToken)
     })
 
 })
@@ -38,4 +38,9 @@ router.get('/check-token', validateToken, (req, res) => {
     res.json(req.user)
 })
 
-module.exports = router
+router.get('/basic-info/:id', async (req, res) => {
+    const id = req.params.id
+    const basicInfo = await Users.findByPk(id, { attributes: { exclude: ['password'] } })
+    res.json(basicInfo)
+})
+module.exports = router 

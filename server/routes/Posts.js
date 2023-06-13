@@ -18,9 +18,16 @@ router.get('/byId/:id', async (req, res) => {
     res.json(post)
 })
 
+router.get('/byUserId/:id', async (req, res) => {
+    let id = req.params.id
+    const listOfPosts = await Posts.findAll({ where: { UserId: id }, include: [Likes] })
+    res.json(listOfPosts)
+})
+
 router.post('/', validateToken, async (req, res) => { /*  making a post request to the post route*/
     const post = req.body /*Grab the post data from the body that is sent  in the request*/
     post.username = req.user.username
+    post.UserId = req.user.id
     await Posts.create(post) /*Sequelize function to insert post data into our table called post */
     res.json(post)
 })

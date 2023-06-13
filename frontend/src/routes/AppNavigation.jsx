@@ -6,6 +6,7 @@ import PostCreate from '../pages/PostCreate'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 import PageNotFound from '../pages/PageNotFound'
+import Profile from '../pages/Profile'
 
 function AppNavigation() {
   let element = useRoutes([
@@ -19,9 +20,9 @@ function AppNavigation() {
       element: <Register />,
     },
     {
-      path:'*',
-      element:<PageNotFound/>,
-    },  
+      path: '*',
+      element: <PageNotFound />,
+    },
     {
       element: <AppIndex />,
       children: [
@@ -34,6 +35,10 @@ function AppNavigation() {
         {
           path: '/create-post',
           element: <PostCreate />,
+        },
+        {
+          path: '/profile/:id',
+          element: <Profile />,
         },
       ],
     },

@@ -126,7 +126,7 @@ function Home() {
           return (
             <Card key={index} className="post_card mb-3 p-3">
               <div className="d-flex justify-content-between align-items-center mb-3">
-                <p className="username m-0">
+                <p className="username m-0" onClick={()=>navigate(`/profile/${item.UserId}`)}>
                   @{item.username}
                   <span className="post_date">
                     {' '}

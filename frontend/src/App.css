@@ -149,3 +149,17 @@ span {
 .un-liked_btn {
   color: white;
 }
+
+.user_data_div{
+  color: white;
+}
+.email{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.username_, .joined{
+color: rgb(184, 184, 184);
+}

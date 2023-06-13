@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { RiUser6Line } from 'react-icons/ri'
 import axios from 'axios'
 export default function Header() {
   const [userData, setUserData] = useState(null)
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   useEffect(() => {
     axios
       .get(`http://localhost:2023/auth/check-token`, {
@@ -23,7 +23,12 @@ export default function Header() {
       <div>
         <h4 className="m-0 nameee">seven2welve</h4>
       </div>
-      <div>
+      <div
+        onClick={() => {
+          navigate(`/profile/${userData.id}`)
+          window.location.reload()
+        }}
+      >
         <p className="username m-0">
           {/* {JSON.stringify(userData)} */}
           {userData?.username}{' '}
